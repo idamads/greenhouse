@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h2>🌡 Temperature</h2>
+
+            <span
+                id="temperature"
+                class="value">
+                --
+            </span>
+
+            <small>°C</small>
+
+        </div>
+
+        <div class="card">
+
+            <h2>💧 Humidity</h2>
+
+            <span
+                id="humidity"
+                class="value">
+                --
+            </span>
+
+            <small>%</small>
+
+        </div>
+
+        <div class="card">
+
+            <h2>☀ Light</h2>
+
+            <span
+                id="light"
+                class="value">
+                --
+            </span>
+
+            <small>lux</small>
+
+        </div>
+
+        <div class="card">
+
+            <h2>🌱 CO₂</h2>
+
+            <span
+                id="co2"
+                class="value">
+                --
+            </span>
+
+            <small>ppm</small>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="status-panel">
+
+    <div class="status-card">
+
+        <h3>Connection</h3>
+
+        <p id="connection">
+            Waiting...
+        </p>
+
+    </div>
+
+    <div class="status-card">
+
+        <h3>Sensor Signal</h3>
+
+        <p id="signal">
+            --
+        </p>
+
+    </div>
+
+    <div class="status-card">
+
+        <h3>System Time</h3>
+
+        <p id="clock">
+            --
+        </p>
+
+    </div>
+
+</section>
+
+<section class="alerts">
+
+    <h2>⚠ Alerts</h2>
+
+    <div id="alerts">
+
+        <p class="empty">
+            No active alerts.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="history">
+
+    <h2>Recent Measurements</h2>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>Time</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Light</th>
+            <th>CO₂</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="history">
+
+        <tr>
+
+            <td colspan="5">
+                No data available
+            </td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+{% endblock %}
